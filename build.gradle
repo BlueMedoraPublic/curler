@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'bluemedora'
+version '0.1'
+
+sourceCompatibility = 1.6
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.toile-libre.libe', name: 'curl', version: '0.0.6'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'bluemedora.Curler'
+        )
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
