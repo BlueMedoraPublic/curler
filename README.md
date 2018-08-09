@@ -4,7 +4,7 @@
 
 Curl approximator written in Java, wrapping [libetl/curl](https://github.com/libetl/curl)
 
-Find the latest release [here](https://github.com/BlueMedora/curler/releases)!
+Find the latest release [here](https://github.com/BlueMedoraPublic/curler/releases)!
 
 ## Why
 
